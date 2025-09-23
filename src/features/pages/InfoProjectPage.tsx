@@ -3,25 +3,12 @@ import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Card, Badge, Button } from 'flowbite-react';
 import { ArrowLeftIcon, CodeBracketIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 import proyectsData from '../../core/proyectsDev.json';
-
-interface Project {
-  id: string;
-  nombre: string;
-  categoria: string;
-  ubicacion: string;
-  descripcion: string;
-  actividades_servicios: string[];
-  procesos_principales: string[];
-  proceso_automatizar: string;
-  requisitos_funcionales: string[];
-  requisitos_no_funcionales: string[];
-  tecnologias: string[];
-}
+import type { ProjectDev } from '../entities/projectdev';
 
 const InfoProjectPage: React.FC = () => {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
-  const [project, setProject] = useState<Project | null>(null);
+  const [project, setProject] = useState<ProjectDev | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
