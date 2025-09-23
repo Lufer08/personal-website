@@ -1,0 +1,88 @@
+{
+  "projects_dev": [
+    {
+      "id": "superstore",
+      "nombre": "SuperStore - Sistema de Gestión de Inventario",
+      "categoria": "Aplicación Empresarial",
+      "ubicacion": "Lima, Perú",
+      "descripcion": "Cadena de tiendas minoristas con tres sucursales. El proyecto busca automatizar la gestión de inventario para reemplazar el uso de hojas de cálculo y mejorar la eficiencia operativa.",
+      "actividades_servicios": [
+        "Venta de alimentos y productos frescos",
+        "Venta de dispositivos electrónicos",
+        "Venta de artículos para el hogar",
+        "Ropa y accesorios",
+        "Atención al cliente",
+        "Devoluciones y cambios"
+      ],
+      "procesos_principales": [
+        "Monitoreo continuo del inventario",
+        "Identificación de bajo stock y generación de órdenes de compra",
+        "Gestión optimizada del inventario y análisis de demanda"
+      ],
+      "proceso_automatizar": "Gestión, reposición y reporte de inventario.",
+      "requisitos_funcionales": [
+        "Registro de mercancía entrante",
+        "Reporte de bajo stock",
+        "Reporte de productos perecibles",
+        "Reporte de productos defectuosos",
+        "Reporte de productos con mayor stock",
+        "Gestión de proveedores",
+        "Gestión de eliminación de productos"
+      ],
+      "requisitos_no_funcionales": [
+        "Rendimiento",
+        "Disponibilidad 24/7",
+        "Seguridad",
+        "Usabilidad",
+        "Actualización en tiempo real"
+      ],
+      "tecnologias": [
+        "C++",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "id": "servitech",
+      "nombre": "Servitech - Plataforma de Servicios Técnicos",
+      "categoria": "Aplicación Web/Móvil",
+      "ubicacion": "Lima, Perú",
+      "descripcion": "Plataforma web y móvil que conecta a clientes con técnicos especializados en electricidad, carpintería, fontanería y más, simplificando el acceso a servicios confiables para el hogar.",
+      "actividades_servicios": [
+        "Conexión de clientes con técnicos",
+        "Gestión de citas de mantenimiento",
+        "Atención al cliente",
+        "Programación y cancelación de servicios",
+        "Evaluación de técnicos",
+        "Pagos y seguridad"
+      ],
+      "procesos_principales": [
+        "Búsqueda de técnicos confiables",
+        "Programación de citas de servicio",
+        "Gestión de perfiles de técnicos y clientes"
+      ],
+      "proceso_automatizar": "Gestión de solicitudes y servicios técnicos.",
+      "requisitos_funcionales": [
+        "Registro de cuentas (clientes y técnicos)",
+        "Inicio de sesión",
+        "Solicitud de servicio",
+        "Agendar citas",
+        "Historial de servicios",
+        "Gestión de reseñas",
+        "Gestión de disponibilidad"
+      ],
+      "requisitos_no_funcionales": [
+        "Rendimiento",
+        "Disponibilidad 24/7",
+        "Seguridad",
+        "Usabilidad",
+        "Escalabilidad"
+      ],
+      "tecnologias": [
+        "Spring Boot",
+        "Angular",
+        "JavaScript",
+        "MySQL"
+      ]
+    }
+  ]
+}

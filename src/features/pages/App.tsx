@@ -1,9 +1,11 @@
 import { Button, Card, Badge, Modal } from 'flowbite-react';
 import { EnvelopeIcon, BuildingOfficeIcon, CodeBracketSquareIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Footer from '../../shared/components/Footer';
 import Header from '../../shared/components/Header';
 import luisVerdeImg from '../../assets/my_avatar/Luis_Verde.jpg';
+import proyectsData from '../../core/proyectsDev.json';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -255,167 +257,131 @@ function App() {
               <div>
                 <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-900 mb-6 sm:mb-8 text-center">Business Analytics</h4>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
-                  <Card className="hover:shadow-lg transition-shadow overflow-hidden">
+                  <Card className="hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden bg-white border-2 hover:border-blue-200">
                     <div className="h-40 sm:h-48 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg mb-4 flex items-center justify-center">
-                      <span className="text-white text-3xl sm:text-4xl">📊</span>
+                      <span className="text-white text-3xl sm:text-4xl drop-shadow-lg">📊</span>
                     </div>
-                    <h5 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">[NOMBRE_DEL_PROYECTO_ANALYTICS_1]</h5>
-                    <p className="text-gray-600 mb-4 text-sm sm:text-base">
-                      [DESCRIPCIÓN_BREVE_DEL_PROYECTO_ANALYTICS_1]
-                    </p>
-                    <div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
-                      <Badge color="blue" size="sm" className="text-xs">[TECNOLOGÍA_ANALYTICS_1]</Badge>
-                      <Badge color="green" size="sm" className="text-xs">[TECNOLOGÍA_ANALYTICS_2]</Badge>
-                    </div>
-                    <div className="flex flex-col sm:flex-row gap-2">
-                      <Button size="sm" color="blue" className="w-full sm:w-auto text-xs sm:text-sm">
-                        <a href="[URL_DEL_PROYECTO_ANALYTICS_1]" target="_blank" rel="noopener noreferrer" className="text-white">
-                          Ver Proyecto
-                        </a>
-                      </Button>
-                      <Button size="sm" color="gray" className="w-full sm:w-auto text-xs sm:text-sm">
-                        <a href="[URL_DEL_CÓDIGO_ANALYTICS_1]" target="_blank" rel="noopener noreferrer">
-                          Código
-                        </a>
-                      </Button>
+                    <div className="p-1">
+                      <h5 className="text-lg sm:text-xl font-bold text-white mb-3 text-center leading-tight">Próximamente - Analytics 1</h5>
+                      <p className="text-white mb-4 text-sm sm:text-base text-center font-medium leading-relaxed">
+                        Proyecto de análisis de datos y visualización con dashboards interactivos para toma de decisiones empresariales.
+                      </p>
+                      <div className="flex flex-wrap justify-center gap-2 mb-6">
+                        <Badge color="blue" size="sm" className="text-xs font-semibold">Python</Badge>
+                        <Badge color="blue" size="sm" className="text-xs font-semibold">Power BI</Badge>
+                        <Badge color="blue" size="sm" className="text-xs font-semibold">SQL</Badge>
+                      </div>
+                      <div className="flex justify-center">
+                        <Button 
+                          size="lg" 
+                          disabled
+                          className="w-full bg-blue-400 text-white font-semibold py-3 rounded-lg cursor-not-allowed opacity-60"
+                        >
+                          Próximamente
+                        </Button>
+                      </div>
                     </div>
                   </Card>
 
-                  <Card className="hover:shadow-lg transition-shadow overflow-hidden">
+                  <Card className="hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden bg-white border-2 hover:border-blue-200">
                     <div className="h-40 sm:h-48 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg mb-4 flex items-center justify-center">
-                      <span className="text-white text-3xl sm:text-4xl">📈</span>
+                      <span className="text-white text-3xl sm:text-4xl drop-shadow-lg">📈</span>
                     </div>
-                    <h5 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">[NOMBRE_DEL_PROYECTO_ANALYTICS_2]</h5>
-                    <p className="text-gray-600 mb-4 text-sm sm:text-base">
-                      [DESCRIPCIÓN_BREVE_DEL_PROYECTO_ANALYTICS_2]
-                    </p>
-                    <div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
-                      <Badge color="blue" size="sm" className="text-xs">[TECNOLOGÍA_ANALYTICS_3]</Badge>
-                      <Badge color="purple" size="sm" className="text-xs">[TECNOLOGÍA_ANALYTICS_4]</Badge>
-                    </div>
-                    <div className="flex flex-col sm:flex-row gap-2">
-                      <Button size="sm" color="blue" className="w-full sm:w-auto text-xs sm:text-sm">
-                        <a href="[URL_DEL_PROYECTO_ANALYTICS_2]" target="_blank" rel="noopener noreferrer" className="text-white">
-                          Ver Proyecto
-                        </a>
-                      </Button>
-                      <Button size="sm" color="gray" className="w-full sm:w-auto text-xs sm:text-sm">
-                        <a href="[URL_DEL_CÓDIGO_ANALYTICS_2]" target="_blank" rel="noopener noreferrer">
-                          Código
-                        </a>
-                      </Button>
+                    <div className="p-1">
+                      <h5 className="text-lg sm:text-xl font-bold text-white mb-3 text-center leading-tight">Próximamente - Analytics 2</h5>
+                      <p className="text-white mb-4 text-sm sm:text-base text-center font-medium leading-relaxed">
+                        Sistema de análisis predictivo y machine learning para optimización de procesos y predicción de tendencias.
+                      </p>
+                      <div className="flex flex-wrap justify-center gap-2 mb-6">
+                        <Badge color="blue" size="sm" className="text-xs font-semibold">Python</Badge>
+                        <Badge color="blue" size="sm" className="text-xs font-semibold">Excel</Badge>
+                        <Badge color="blue" size="sm" className="text-xs font-semibold">Tableau</Badge>
+                      </div>
+                      <div className="flex justify-center">
+                        <Button 
+                          size="lg" 
+                          disabled
+                          className="w-full bg-blue-400 text-white font-semibold py-3 rounded-lg cursor-not-allowed opacity-60"
+                        >
+                          Próximamente
+                        </Button>
+                      </div>
                     </div>
                   </Card>
 
-                  <Card className="hover:shadow-lg transition-shadow overflow-hidden">
+                  <Card className="hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden bg-white border-2 hover:border-blue-200">
                     <div className="h-40 sm:h-48 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg mb-4 flex items-center justify-center">
-                      <span className="text-white text-3xl sm:text-4xl">📊</span>
+                      <span className="text-white text-3xl sm:text-4xl drop-shadow-lg">📊</span>
                     </div>
-                    <h5 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">[NOMBRE_DEL_PROYECTO_ANALYTICS_3]</h5>
-                    <p className="text-gray-600 mb-4 text-sm sm:text-base">
-                      [DESCRIPCIÓN_BREVE_DEL_PROYECTO_ANALYTICS_3]
-                    </p>
-                    <div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
-                      <Badge color="blue" size="sm" className="text-xs">[TECNOLOGÍA_ANALYTICS_5]</Badge>
-                      <Badge color="green" size="sm" className="text-xs">[TECNOLOGÍA_ANALYTICS_6]</Badge>
-                    </div>
-                    <div className="flex flex-col sm:flex-row gap-2">
-                      <Button size="sm" color="blue" className="w-full sm:w-auto text-xs sm:text-sm">
-                        <a href="[URL_DEL_PROYECTO_ANALYTICS_3]" target="_blank" rel="noopener noreferrer" className="text-white">
-                          Ver Proyecto
-                        </a>
-                      </Button>
-                      <Button size="sm" color="gray" className="w-full sm:w-auto text-xs sm:text-sm">
-                        <a href="[URL_DEL_CÓDIGO_ANALYTICS_3]" target="_blank" rel="noopener noreferrer">
-                          Código
-                        </a>
-                      </Button>
+                    <div className="p-1">
+                      <h5 className="text-lg sm:text-xl font-bold text-white mb-3 text-center leading-tight">Próximamente - Analytics 3</h5>
+                      <p className="text-white mb-4 text-sm sm:text-base text-center font-medium leading-relaxed">
+                        Dashboard de métricas en tiempo real para monitoreo de KPIs empresariales y reportes automáticos.
+                      </p>
+                      <div className="flex flex-wrap justify-center gap-2 mb-6">
+                        <Badge color="blue" size="sm" className="text-xs font-semibold">Python</Badge>
+                        <Badge color="blue" size="sm" className="text-xs font-semibold">PostgreSQL</Badge>
+                        <Badge color="blue" size="sm" className="text-xs font-semibold">Power BI</Badge>
+                      </div>
+                      <div className="flex justify-center">
+                        <Button 
+                          size="lg" 
+                          disabled
+                          className="w-full bg-blue-400 text-white font-semibold py-3 rounded-lg cursor-not-allowed opacity-60"
+                        >
+                          Próximamente
+                        </Button>
+                      </div>
                     </div>
                   </Card>
                 </div>
               </div>
 
-              {/* Web Development Projects */}
+              {/* Web Development Projects - Dinámicos desde JSON */}
               <div>
                 <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-green-900 mb-6 sm:mb-8 text-center">Desarrollo Web</h4>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
-                  <Card className="hover:shadow-lg transition-shadow overflow-hidden">
-                    <div className="h-40 sm:h-48 bg-gradient-to-br from-green-400 to-green-600 rounded-lg mb-4 flex items-center justify-center">
-                      <span className="text-white text-3xl sm:text-4xl">🌐</span>
-                    </div>
-                    <h5 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">[NOMBRE_DEL_PROYECTO_WEB_1]</h5>
-                    <p className="text-gray-600 mb-4 text-sm sm:text-base">
-                      [DESCRIPCIÓN_BREVE_DEL_PROYECTO_WEB_1]
-                    </p>
-                    <div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
-                      <Badge color="green" size="sm" className="text-xs">[TECNOLOGÍA_WEB_1]</Badge>
-                      <Badge color="blue" size="sm" className="text-xs">[TECNOLOGÍA_WEB_2]</Badge>
-                    </div>
-                    <div className="flex flex-col sm:flex-row gap-2">
-                      <Button size="sm" color="green" className="w-full sm:w-auto text-xs sm:text-sm">
-                        <a href="[URL_DEL_PROYECTO_WEB_1]" target="_blank" rel="noopener noreferrer" className="text-white">
-                          Ver Proyecto
-                        </a>
-                      </Button>
-                      <Button size="sm" color="gray" className="w-full sm:w-auto text-xs sm:text-sm">
-                        <a href="[URL_DEL_CÓDIGO_WEB_1]" target="_blank" rel="noopener noreferrer">
-                          Código
-                        </a>
-                      </Button>
-                    </div>
-                  </Card>
-
-                  <Card className="hover:shadow-lg transition-shadow overflow-hidden">
-                    <div className="h-40 sm:h-48 bg-gradient-to-br from-green-500 to-green-700 rounded-lg mb-4 flex items-center justify-center">
-                      <span className="text-white text-3xl sm:text-4xl">⚛️</span>
-                    </div>
-                    <h5 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">[NOMBRE_DEL_PROYECTO_WEB_2]</h5>
-                    <p className="text-gray-600 mb-4 text-sm sm:text-base">
-                      [DESCRIPCIÓN_BREVE_DEL_PROYECTO_WEB_2]
-                    </p>
-                    <div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
-                      <Badge color="green" size="sm" className="text-xs">[TECNOLOGÍA_WEB_3]</Badge>
-                      <Badge color="purple" size="sm" className="text-xs">[TECNOLOGÍA_WEB_4]</Badge>
-                    </div>
-                    <div className="flex flex-col sm:flex-row gap-2">
-                      <Button size="sm" color="green" className="w-full sm:w-auto text-xs sm:text-sm">
-                        <a href="[URL_DEL_PROYECTO_WEB_2]" target="_blank" rel="noopener noreferrer" className="text-white">
-                          Ver Proyecto
-                        </a>
-                      </Button>
-                      <Button size="sm" color="gray" className="w-full sm:w-auto text-xs sm:text-sm">
-                        <a href="[URL_DEL_CÓDIGO_WEB_2]" target="_blank" rel="noopener noreferrer">
-                          Código
-                        </a>
-                      </Button>
-                    </div>
-                  </Card>
-
-                  <Card className="hover:shadow-lg transition-shadow overflow-hidden">
-                    <div className="h-40 sm:h-48 bg-gradient-to-br from-green-600 to-green-800 rounded-lg mb-4 flex items-center justify-center">
-                      <span className="text-white text-3xl sm:text-4xl">🚀</span>
-                    </div>
-                    <h5 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">[NOMBRE_DEL_PROYECTO_WEB_3]</h5>
-                    <p className="text-gray-600 mb-4 text-sm sm:text-base">
-                      [DESCRIPCIÓN_BREVE_DEL_PROYECTO_WEB_3]
-                    </p>
-                    <div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
-                      <Badge color="green" size="sm" className="text-xs">[TECNOLOGÍA_WEB_5]</Badge>
-                      <Badge color="blue" size="sm" className="text-xs">[TECNOLOGÍA_WEB_6]</Badge>
-                    </div>
-                    <div className="flex flex-col sm:flex-row gap-2">
-                      <Button size="sm" color="green" className="w-full sm:w-auto text-xs sm:text-sm">
-                        <a href="[URL_DEL_PROYECTO_WEB_3]" target="_blank" rel="noopener noreferrer" className="text-white">
-                          Ver Proyecto
-                        </a>
-                      </Button>
-                      <Button size="sm" color="gray" className="w-full sm:w-auto text-xs sm:text-sm">
-                        <a href="[URL_DEL_CÓDIGO_WEB_3]" target="_blank" rel="noopener noreferrer">
-                          Código
-                        </a>
-                      </Button>
-                    </div>
-                  </Card>
+                  {proyectsData.projects_dev.map((project, index) => (
+                    <Card key={project.id} className="hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden bg-white border-2 hover:border-green-200">
+                      <div className={`h-40 sm:h-48 bg-gradient-to-br ${
+                        index === 0 ? 'from-green-400 to-green-600' : 
+                        index === 1 ? 'from-blue-400 to-blue-600' : 
+                        'from-purple-400 to-purple-600'
+                      } rounded-lg mb-4 flex items-center justify-center`}>
+                        <span className="text-white text-3xl sm:text-4xl drop-shadow-lg">
+                          {project.categoria.includes('Web') || project.categoria.includes('Móvil') ? '🌐' : '💼'}
+                        </span>
+                      </div>
+                      <div className="p-1">
+                        <h5 className="text-lg sm:text-xl font-bold text-white mb-3 text-center leading-tight">{project.nombre}</h5>
+                        <p className="text-white mb-4 text-sm sm:text-base line-clamp-3 text-center font-medium leading-relaxed">
+                          {project.descripcion}
+                        </p>
+                        <div className="flex flex-wrap justify-center gap-2 mb-6">
+                          {project.tecnologias.slice(0, 3).map((tech, techIndex) => (
+                            <Badge 
+                              key={techIndex} 
+                              color="green" 
+                              size="sm" 
+                              className="text-xs font-semibold"
+                            >
+                              {tech}
+                            </Badge>
+                          ))}
+                        </div>
+                        <div className="flex justify-center">
+                          <Link to={`/info-project?id=${project.id}`} className="w-full">
+                            <Button 
+                              size="lg" 
+                              className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
+                            >
+                              Ver Proyecto
+                            </Button>
+                          </Link>
+                        </div>
+                      </div>
+                    </Card>
+                  ))}
                 </div>
               </div>
 
@@ -423,81 +389,81 @@ function App() {
               <div>
                 <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-purple-900 mb-6 sm:mb-8 text-center">Desarrollo de Videojuegos</h4>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
-                  <Card className="hover:shadow-lg transition-shadow overflow-hidden">
+                  <Card className="hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden bg-white border-2 hover:border-purple-200">
                     <div className="h-40 sm:h-48 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg mb-4 flex items-center justify-center">
-                      <span className="text-white text-3xl sm:text-4xl">🎮</span>
+                      <span className="text-white text-3xl sm:text-4xl drop-shadow-lg">🎮</span>
                     </div>
-                    <h5 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">[NOMBRE_DEL_PROYECTO_GAME_1]</h5>
-                    <p className="text-gray-600 mb-4 text-sm sm:text-base">
-                      [DESCRIPCIÓN_BREVE_DEL_PROYECTO_GAME_1]
-                    </p>
-                    <div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
-                      <Badge color="purple" size="sm" className="text-xs">[TECNOLOGÍA_GAME_1]</Badge>
-                      <Badge color="red" size="sm" className="text-xs">[TECNOLOGÍA_GAME_2]</Badge>
-                    </div>
-                    <div className="flex flex-col sm:flex-row gap-2">
-                      <Button size="sm" color="purple" className="w-full sm:w-auto text-xs sm:text-sm">
-                        <a href="[URL_DEL_PROYECTO_GAME_1]" target="_blank" rel="noopener noreferrer" className="text-white">
-                          Ver Proyecto
-                        </a>
-                      </Button>
-                      <Button size="sm" color="gray" className="w-full sm:w-auto text-xs sm:text-sm">
-                        <a href="[URL_DEL_CÓDIGO_GAME_1]" target="_blank" rel="noopener noreferrer">
-                          Código
-                        </a>
-                      </Button>
+                    <div className="p-1">
+                      <h5 className="text-lg sm:text-xl font-bold text-white mb-3 text-center leading-tight">Próximamente - Game 1</h5>
+                      <p className="text-white mb-4 text-sm sm:text-base text-center font-medium leading-relaxed">
+                        Juego 2D de plataformas con mecánicas innovadoras, diseñado con Unity y programado en C# para PC.
+                      </p>
+                      <div className="flex flex-wrap justify-center gap-2 mb-6">
+                        <Badge color="purple" size="sm" className="text-xs font-semibold">Unity</Badge>
+                        <Badge color="purple" size="sm" className="text-xs font-semibold">C#</Badge>
+                        <Badge color="purple" size="sm" className="text-xs font-semibold">Photoshop</Badge>
+                      </div>
+                      <div className="flex justify-center">
+                        <Button 
+                          size="lg" 
+                          disabled
+                          className="w-full bg-purple-400 text-white font-semibold py-3 rounded-lg cursor-not-allowed opacity-60"
+                        >
+                          Próximamente
+                        </Button>
+                      </div>
                     </div>
                   </Card>
 
-                  <Card className="hover:shadow-lg transition-shadow overflow-hidden">
+                  <Card className="hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden bg-white border-2 hover:border-purple-200">
                     <div className="h-40 sm:h-48 bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg mb-4 flex items-center justify-center">
-                      <span className="text-white text-3xl sm:text-4xl">🕹️</span>
+                      <span className="text-white text-3xl sm:text-4xl drop-shadow-lg">🕹️</span>
                     </div>
-                    <h5 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">[NOMBRE_DEL_PROYECTO_GAME_2]</h5>
-                    <p className="text-gray-600 mb-4 text-sm sm:text-base">
-                      [DESCRIPCIÓN_BREVE_DEL_PROYECTO_GAME_2]
-                    </p>
-                    <div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
-                      <Badge color="purple" size="sm" className="text-xs">[TECNOLOGÍA_GAME_3]</Badge>
-                      <Badge color="blue" size="sm" className="text-xs">[TECNOLOGÍA_GAME_4]</Badge>
-                    </div>
-                    <div className="flex flex-col sm:flex-row gap-2">
-                      <Button size="sm" color="purple" className="w-full sm:w-auto text-xs sm:text-sm">
-                        <a href="[URL_DEL_PROYECTO_GAME_2]" target="_blank" rel="noopener noreferrer" className="text-white">
-                          Ver Proyecto
-                        </a>
-                      </Button>
-                      <Button size="sm" color="gray" className="w-full sm:w-auto text-xs sm:text-sm">
-                        <a href="[URL_DEL_CÓDIGO_GAME_2]" target="_blank" rel="noopener noreferrer">
-                          Código
-                        </a>
-                      </Button>
+                    <div className="p-1">
+                      <h5 className="text-lg sm:text-xl font-bold text-white mb-3 text-center leading-tight">Próximamente - Game 2</h5>
+                      <p className="text-white mb-4 text-sm sm:text-base text-center font-medium leading-relaxed">
+                        Videojuego móvil con elementos de estrategia y RPG, desarrollado en Unity para Android e iOS.
+                      </p>
+                      <div className="flex flex-wrap justify-center gap-2 mb-6">
+                        <Badge color="purple" size="sm" className="text-xs font-semibold">Unity</Badge>
+                        <Badge color="purple" size="sm" className="text-xs font-semibold">C#</Badge>
+                        <Badge color="purple" size="sm" className="text-xs font-semibold">Mobile</Badge>
+                      </div>
+                      <div className="flex justify-center">
+                        <Button 
+                          size="lg" 
+                          disabled
+                          className="w-full bg-purple-400 text-white font-semibold py-3 rounded-lg cursor-not-allowed opacity-60"
+                        >
+                          Próximamente
+                        </Button>
+                      </div>
                     </div>
                   </Card>
 
-                  <Card className="hover:shadow-lg transition-shadow overflow-hidden">
+                  <Card className="hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden bg-white border-2 hover:border-purple-200">
                     <div className="h-40 sm:h-48 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg mb-4 flex items-center justify-center">
-                      <span className="text-white text-3xl sm:text-4xl">🎯</span>
+                      <span className="text-white text-3xl sm:text-4xl drop-shadow-lg">🎯</span>
                     </div>
-                    <h5 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">[NOMBRE_DEL_PROYECTO_GAME_3]</h5>
-                    <p className="text-gray-600 mb-4 text-sm sm:text-base">
-                      [DESCRIPCIÓN_BREVE_DEL_PROYECTO_GAME_3]
-                    </p>
-                    <div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
-                      <Badge color="purple" size="sm" className="text-xs">[TECNOLOGÍA_GAME_5]</Badge>
-                      <Badge color="green" size="sm" className="text-xs">[TECNOLOGÍA_GAME_6]</Badge>
-                    </div>
-                    <div className="flex flex-col sm:flex-row gap-2">
-                      <Button size="sm" color="purple" className="w-full sm:w-auto text-xs sm:text-sm">
-                        <a href="[URL_DEL_PROYECTO_GAME_3]" target="_blank" rel="noopener noreferrer" className="text-white">
-                          Ver Proyecto
-                        </a>
-                      </Button>
-                      <Button size="sm" color="gray" className="w-full sm:w-auto text-xs sm:text-sm">
-                        <a href="[URL_DEL_CÓDIGO_GAME_3]" target="_blank" rel="noopener noreferrer">
-                          Código
-                        </a>
-                      </Button>
+                    <div className="p-1">
+                      <h5 className="text-lg sm:text-xl font-bold text-white mb-3 text-center leading-tight">Próximamente - Game 3</h5>
+                      <p className="text-white mb-4 text-sm sm:text-base text-center font-medium leading-relaxed">
+                        Simulador de gestión empresarial con enfoque educativo, desarrollado para enseñanza universitaria.
+                      </p>
+                      <div className="flex flex-wrap justify-center gap-2 mb-6">
+                        <Badge color="purple" size="sm" className="text-xs font-semibold">Unity</Badge>
+                        <Badge color="purple" size="sm" className="text-xs font-semibold">C#</Badge>
+                        <Badge color="purple" size="sm" className="text-xs font-semibold">Educativo</Badge>
+                      </div>
+                      <div className="flex justify-center">
+                        <Button 
+                          size="lg" 
+                          disabled
+                          className="w-full bg-purple-400 text-white font-semibold py-3 rounded-lg cursor-not-allowed opacity-60"
+                        >
+                          Próximamente
+                        </Button>
+                      </div>
                     </div>
                   </Card>
                 </div>
