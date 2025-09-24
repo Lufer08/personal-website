@@ -95,8 +95,8 @@ const InfoProjectPage: React.FC = () => {
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between">
-            <Button onClick={handleGoBack} color="gray" size="sm">
-              <ArrowLeftIcon className="w-4 h-4 mr-2" />
+            <Button onClick={handleGoBack} color="gray" size="md" className="px-6 py-3 font-semibold">
+              <ArrowLeftIcon className="w-5 h-5 mr-2" />
               Volver
             </Button>
             <Badge color="purple" size="lg">
@@ -108,12 +108,12 @@ const InfoProjectPage: React.FC = () => {
 
       {/* Contenido principal */}
       <main className="container mx-auto px-4 sm:px-6 py-8">
-        {/* Título y ubicación */}
+        {/* Título y detalles */}
         <div className="text-center mb-8">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {project.nombre}
           </h1>
-          <p className="text-lg text-gray-600 mb-2">📍 {project.ubicacion}</p>
+          <p className="text-lg text-gray-600 mb-2">{project.tipo}</p>
           <div className="flex flex-wrap justify-center gap-2 mt-4">
             {project.tecnologias.map((tech, index) => (
               <Badge key={index} color={getTechnologyColor(tech)} size="sm">

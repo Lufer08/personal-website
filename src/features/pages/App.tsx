@@ -30,7 +30,7 @@ function App() {
               Apasionado por la tecnología y la creación de soluciones digitales. Actualmente en 8.º ciclo de Ingeniería de Sistemas en la UPC, con proyectos en dashboards, aplicaciones web y desarrollo de videojuegos.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 px-4">
-              <Button color="light" size="lg" className="w-full sm:w-auto">
+              <Button color="light" size="lg" className="w-full sm:w-auto hover:text-gray-900">
                 Ver mis trabajos
               </Button>
               <Button color="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600 w-full sm:w-auto">

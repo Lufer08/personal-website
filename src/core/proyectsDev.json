@@ -4,7 +4,7 @@
       "id": "superstore",
       "nombre": "SuperStore - Sistema de Gestión de Inventario",
       "categoria": "Aplicación Empresarial",
-      "ubicacion": "Lima, Perú",
+      "tipo": "Proyecto Universitario",
       "descripcion": "Cadena de tiendas minoristas con tres sucursales. El proyecto busca automatizar la gestión de inventario para reemplazar el uso de hojas de cálculo y mejorar la eficiencia operativa.",
       "actividades_servicios": [
         "Venta de alimentos y productos frescos",
@@ -45,7 +45,7 @@
       "id": "servitech",
       "nombre": "Servitech - Plataforma de Servicios Técnicos",
       "categoria": "Aplicación Web/Móvil",
-      "ubicacion": "Lima, Perú",
+      "tipo": "Proyecto Universitario",
       "descripcion": "Plataforma web y móvil que conecta a clientes con técnicos especializados en electricidad, carpintería, fontanería y más, simplificando el acceso a servicios confiables para el hogar.",
       "actividades_servicios": [
         "Conexión de clientes con técnicos",

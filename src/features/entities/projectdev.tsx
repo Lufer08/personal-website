@@ -3,7 +3,7 @@ export interface ProjectDev {
   id: string;
   nombre: string;
   categoria: string;
-  ubicacion: string;
+  tipo: string;
   descripcion: string;
   actividades_servicios: string[];
   procesos_principales: string[];
